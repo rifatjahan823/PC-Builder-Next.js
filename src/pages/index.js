@@ -1,3 +1,4 @@
+import Category from '@/components/Homepage/Category';
 import HeroSection from '@/components/Homepage/HeroSection';
 import RootLayout from '@/components/layouts/RootLayout';
 import Head from 'next/head';
@@ -13,6 +14,7 @@ const HomePage = () => {
       </Head>
       <div> 
       <HeroSection/>
+      <Category/>
       </div>
     </>
   );
