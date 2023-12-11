@@ -26,10 +26,10 @@ async function run(req, res) {
     console.error('Error connecting to MongoDB:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   } finally {
-   on
- 
+    // await client.close(); // Close the MongoDB connection
   }
 }
+
 
 export default run;
 
