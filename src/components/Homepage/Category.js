@@ -19,9 +19,9 @@ const Category = () => {
         {/* -----------category------------- */}
         <div className="flex justify-between items-center flex-wrap text-center mt-5">
           {/* ----------c-1-------- */}
-          <Link href='/'><GiProcessor className="text-6xl mx-auto text-green-500" /><h2 className="text-sm font-extrabold">Processor</h2></Link>
+          <Link href='/featured/Processor'><GiProcessor className="text-6xl mx-auto text-green-500" /><h2 className="text-sm font-extrabold">Processor</h2></Link>
           {/* ----------c-2-------- */}
-          <Link href='' className="px-2"><BsMotherboard className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Motherboard</h2> </Link>
+          <Link href='/featured/Motherboard' className="px-2"><BsMotherboard className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Motherboard</h2> </Link>
           {/* ----------c-3-------- */}
           <Link href='/'><MdStorage className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">RAM</h2></Link>
           {/* ----------c-4-------- */}
