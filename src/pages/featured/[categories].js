@@ -1,5 +1,6 @@
 // pages/featured/[categories].js
 import RootLayout from "@/components/layouts/RootLayout";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -15,26 +16,30 @@ const FeaturedCategories = ({ products }) => {
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 justify-center mt-10">
         {filteredProducts.map((product, i) => (
           <div key={i}>
-            <div className="bg-white shadow-md p-5">
-              <img src={product.image} alt="" className="w-52 h-52 mx-auto" />
-              <div className="mt-3">
-                <h2 className="font-bold text-lg">{product.name}</h2>
-                <h2>
-                  <spn className="font-bold">Price: </spn>{" "}
-                  <span className="font-bold">&#2547;</span>{" "}
-                  {product.Price.toLocaleString()}
-                </h2>
-                <h2>
-                  <spn className="font-bold">Category: </spn> {product.category}
-                </h2>
-                <h2>
-                  <span className="font-bold">Status:</span> {product.Status}
-                </h2>
-                <h2>
-                  <span className="font-bold">Rating:</span> {product.rating}
-                </h2>
+            <Link href={`/details/${product._id}`}>
+              {" "}
+              <div className="bg-white shadow-md p-5">
+                <img src={product.image} alt="" className="w-52 h-52 mx-auto" />
+                <div className="mt-3">
+                  <h2 className="font-bold text-lg">{product.name}</h2>
+                  <h2>
+                    <spn className="font-bold">Price: </spn>{" "}
+                    <span className="font-bold">&#2547;</span>{" "}
+                    {product.Price.toLocaleString()}
+                  </h2>
+                  <h2>
+                    <spn className="font-bold">Category: </spn>{" "}
+                    {product.category}
+                  </h2>
+                  <h2>
+                    <span className="font-bold">Status:</span> {product.Status}
+                  </h2>
+                  <h2>
+                    <span className="font-bold">Rating:</span> {product.rating}
+                  </h2>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

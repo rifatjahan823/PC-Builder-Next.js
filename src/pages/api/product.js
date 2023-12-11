@@ -1,6 +1,7 @@
 
 import { MongoClient, ServerApiVersion } from 'mongodb';
-const uri = "mongodb+srv://ph-news-portal:okFW5dVilvdn5xxz@cluster0.wgeg0aq.mongodb.net/?retryWrites=true&w=majority";
+
+const uri = "mongodb+srv://PC-Builder:92CUQoDZlPSg8E4r@cluster0.7b7ma7m.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -11,22 +12,24 @@ const client = new MongoClient(uri, {
   }
 });
 
-async function run(req,res) {
+async function run(req, res) {
   try {
     await client.connect();
-  const newsCollection=client.db('news_portal').collection("news")
-  if(req.method==="GET"){
-    const news=await newsCollection.find({}).toArray();
-    res.send({message:"success",status:200,data:news});
-  }
-  if(req.method==="POST"){
-    const news=req.body;
-    const result=newsCollection.insertOne(news);
-    res.json(result)
-  }
+    const productCollection = client.db('products').collection('product');
 
+    // Retrieve products from MongoDB
+    const products = await productCollection.find({}).toArray();
+
+    // Send products as a JSON response
+    res.status(200).json({ products });
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   } finally {
-    // await client.close();
+   on
+ 
   }
 }
-export default run
+
+export default run;
+

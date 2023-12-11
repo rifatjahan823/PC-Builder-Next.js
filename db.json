@@ -11,16 +11,6 @@
             "category":"Processor"
         },
         {
-            "name": "14 Core LGA1700 Socket Processor",
-            "description": "This new generation of processors continue to utilize Intel’s performance hybrid architecture to optimize your gaming, content creation, and productivity. Take advantage of platform innovation designed for delivering flexibility and supercharge your CPU performance with a powerful suite of tuning and overclocking tools. Support for the Intel 700 series chipsets and backwards compatibility with the Intel 600 series chipsets allow you to access the features you need for any task. Whether you are working, streaming, gaming, or creating, Intel Core desktop processors deliver the ultimate immersive experience.",
-            "Status": "In Stock",
-            "Price":42860,
-            "KeyFeatures": ["Processor Type. - Core i5","Generation - 14th","Core - 14","CPU Cache - 24MB"],
-            "rating":"5",
-            "image":"/images/Processor.png",
-            "category":"Processor"
-        },
-        {
             "name": "Intel LGA775 Socket Motherboard",
             "description": "Brand - Afox, Model - Afox IG41-MA7, Chipset Brand - Intel, Chipset - Intel G41 Express, CPU Sockets - LGA775, Supported CPU - Intel Core 2 Duo, Core Duo, Pentium D, Pentium 4, Celeron D Processors, Memory Type - DDR3, Memory MHz - 1066/1333/1600MHz, Memory Channel - Dual, Memory Slot - 2, Memory Max. - 16GB, Optane Memory Support - No, Graphics - Integrated, Graphics Chipset - Integrated With Processor, PCI Express Slot - 1 x PCI Express x16, LAN Chipset - Realtek RTL8105, LAN Speed (Mbps) - 10/100Mbps, Audio Chipset - Realtek 662, Audio Channel - 6, Wi-Fi - No, USB Port - 6 x USB 2.0, VGA Port - 1, DVI Port - No, HDMI Port - No, IDE Port - 1, SATA Port - 4 x SATA2, CrossFire Support - No, Sli Support - No, Thunderbolt - No, RGB Support - No, Power Consumption - 60W, Form Factor - Micro-ATX, Warranty - 2 Year, Made in/ Assemble - China",
             "Status": "In Stock",

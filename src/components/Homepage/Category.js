@@ -23,13 +23,13 @@ const Category = () => {
           {/* ----------c-2-------- */}
           <Link href='/featured/Motherboard' className="px-2"><BsMotherboard className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Motherboard</h2> </Link>
           {/* ----------c-3-------- */}
-          <Link href='/'><MdStorage className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">RAM</h2></Link>
+          <Link href='/featured/RAM'><MdStorage className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">RAM</h2></Link>
           {/* ----------c-4-------- */}
-          <Link href='/' className="px-2"><GiPowerRing className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold ">Power Supply Unit</h2></Link>
+          <Link href='/featured/Power Supply Unit' className="px-2"><GiPowerRing className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold ">Power Supply Unit</h2></Link>
           {/* ----------c-5-------- */}
-          <Link href='/'><MdOutlineSdStorage className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Storage Device</h2></Link>
+          <Link href='/featured/Storage Device'><MdOutlineSdStorage className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Storage Device</h2></Link>
           {/* ----------c-6-------- */}
-          <Link href='/'><MdOutlineMonitor className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Monitor</h2></Link>
+          <Link href='/featured/Monitor'><MdOutlineMonitor className="text-6xl mx-auto text-green-500"/><h2 className="text-sm font-extrabold">Monitor</h2></Link>
         </div>
       </div>
     </div>
