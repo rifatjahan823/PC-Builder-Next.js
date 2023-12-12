@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
+import { useSession, signOut } from "next-auth/react";
 
 const NavBar = () => {
+  const { data: session } = useSession();
   return (
     <div>
       <div className="navbar bg-black z-50">
@@ -57,7 +59,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <Link href='/' className="btn btn-ghost normal-case text-xl text-white">PC Build</Link>
+          <Link href='/pcbuild' className="btn btn-ghost normal-case text-xl text-white">PC Build</Link>
         </div>
         <div className="navbar-center hidden lg:flex text-white z-50">
           <ul className="menu menu-horizontal px-1">
@@ -95,8 +97,16 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn mx-3">PC Build</a>
-          <Link href='/login' className="btn">Login</Link>
+          <Link href='/pcbuild' className="btn mx-3">PC Build</Link>
+          {
+              session?.user?
+
+                  <button  className="btn" type="primary" danger onClick={() => signOut()}>
+                    Logout
+                  </button>
+                :
+            <Link href='/login' className="btn">Login</Link>
+          }
         </div>
       </div>
     </div>
