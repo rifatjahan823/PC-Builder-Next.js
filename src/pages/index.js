@@ -43,7 +43,7 @@ HomePage.getLayout = function getLayout(page) {
 export const getStaticProps = async () => {
   const res = await fetch("https://pc-build-tkcl.onrender.com/category");
   const data = await res.json();
-  return { props: { products: data }, revalidate: 10 };
+  return { props: { products: data }, revalidate: 15 };
 };
 
 export default HomePage;

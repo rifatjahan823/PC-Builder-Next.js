@@ -24,7 +24,7 @@ const LoginPage = () => {
           <div className={styles.social_icons}>
             <FaGoogle className="text-3xl mx-auto mt-3 cursor-pointer"
               onClick={() =>
-                signIn("google", { callbackUrl: "http://localhost:3000" })
+                signIn("google", { callbackUrl: "https://pc-build-e5y21u1pm-rifatjahan823.vercel.app/" })
               }
             />
           </div>
