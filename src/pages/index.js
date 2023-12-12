@@ -3,7 +3,7 @@ import FeatureProducts from "@/components/Homepage/FeatureProducts";
 import HeroSection from "@/components/Homepage/HeroSection";
 import RootLayout from "@/components/layouts/RootLayout";
 import Head from "next/head";
-import styles from '@/styles/Home.module.css'
+import styles from "@/styles/Home.module.css";
 
 const HomePage = ({ products }) => {
   return (
@@ -19,10 +19,14 @@ const HomePage = ({ products }) => {
         <Category />
         <div className="w-full mx-auto px-5 my-10  py-5">
           <div className="border-b-2 border-black">
-            <h3 className={`bg-black text-white text-lg font-bold  inline-block ${styles.feature_title}`}>Feature Products</h3>
+            <h3
+              className={`bg-black text-white text-lg font-bold  inline-block ${styles.feature_title}`}
+            >
+              Feature Products
+            </h3>
           </div>
           <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-center mt-5">
-            {products?.products?.map((product) => (
+            {products?.products?.slice(0, 6).map((product) => (
               <FeatureProducts product={product} key={product._id} />
             ))}
           </div>
