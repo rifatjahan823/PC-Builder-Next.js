@@ -1,9 +1,11 @@
-import Category from '@/components/Homepage/Category';
-import HeroSection from '@/components/Homepage/HeroSection';
-import RootLayout from '@/components/layouts/RootLayout';
-import Head from 'next/head';
+import Category from "@/components/Homepage/Category";
+import FeatureProducts from "@/components/Homepage/FeatureProducts";
+import HeroSection from "@/components/Homepage/HeroSection";
+import RootLayout from "@/components/layouts/RootLayout";
+import Head from "next/head";
+import styles from '@/styles/Home.module.css'
 
-const HomePage = () => {
+const HomePage = ({ products }) => {
   return (
     <>
       <Head>
@@ -12,9 +14,19 @@ const HomePage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div> 
-      <HeroSection/>
-      <Category/>
+      <div>
+        <HeroSection />
+        <Category />
+        <div className="w-full mx-auto px-5 my-10  py-5">
+          <div className="border-b-2 border-black">
+            <h3 className={`bg-black text-white text-lg font-bold  inline-block ${styles.feature_title}`}>Feature Products</h3>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-center mt-5">
+            {products?.products?.map((product) => (
+              <FeatureProducts product={product} key={product._id} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
@@ -22,6 +34,12 @@ const HomePage = () => {
 
 HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
+};
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://pc-build-tkcl.onrender.com/category");
+  const data = await res.json();
+  return { props: { products: data }, revalidate: 10 };
 };
 
 export default HomePage;

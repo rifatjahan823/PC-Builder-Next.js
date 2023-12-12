@@ -14,7 +14,7 @@ import styles from "@/styles/Home.module.css";
 
 const HeroSection = () => {
   return (
-    <div className="w-full mx-auto px-5 grid lg:grid-cols-5 grid-cols-1 gap-4 mt-5">
+    <div className="w-full mx-auto px-5 grid lg:grid-cols-5 grid-cols-1 gap-4 mt-5 ">
       {/* -----------Main Slider-------------- */}
       <div className="lg:col-span-3 bg-white shadow-md pb-8 relative">
         <Swiper

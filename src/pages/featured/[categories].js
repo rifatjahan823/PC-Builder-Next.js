@@ -6,7 +6,7 @@ import React from "react";
 
 const FeaturedCategories = ({ products }) => {
   const router = useRouter();
-  const filteredProducts = products.filter(
+  const filteredProducts = products?.products?.filter(
     (product) => product.category === router.query.categories
   );
 
@@ -18,7 +18,7 @@ const FeaturedCategories = ({ products }) => {
           <div key={i}>
             <Link href={`/details/${product._id}`}>
               {" "}
-              <div className="bg-white shadow-md p-5">
+              <div className="bg-white shadow-md p-5 h-full">
                 <img src={product.image} alt="" className="w-52 h-52 mx-auto" />
                 <div className="mt-3">
                   <h2 className="font-bold text-lg">{product.name}</h2>
@@ -55,10 +55,10 @@ FeaturedCategories.getLayout = function getLayout(page) {
 
 export async function getStaticPaths() {
   // Fetch data to determine dynamic paths at build time
-  const res = await fetch("http://localhost:5000/product");
+  const res = await fetch("https://pc-build-tkcl.onrender.com/category");
   const products = await res.json();
 
-  const paths = products.map((product) => ({
+  const paths = products?.products?.map((product) => ({
     params: { categories: product.category },
   }));
 
@@ -67,7 +67,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps() {
   // Fetch data from an external API, file, or database
-  const res = await fetch("http://localhost:5000/product");
+  const res = await fetch("https://pc-build-tkcl.onrender.com/category");
   const products = await res.json();
 
   return {
