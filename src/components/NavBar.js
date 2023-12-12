@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div>
       <div className="navbar bg-black z-50">
-        <div className="navbar-start">
+        <div className="navbar-start z-50">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-black lg:hidden">
               <svg
@@ -25,42 +25,66 @@ const NavBar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
-              <li>
-                <a>Menu</a>
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-50">
+              <li className="font-bold">
+                <a>Product</a>
               </li>
               <li>
-                <a>Categories</a>
-                <ul className="p-2 w-64">
+                <a className="font-bold">Categories</a>
+                <ul className="p-2">
                   <li>
-                    <a>1 ppppp pppp</a>
+                  <Link href='/featured/Processor'>Processor</Link>
                   </li>
                   <li>
-                    <a>2</a>
+                  <Link href='/featured/Motherboard' >Motherboard</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/RAM'>RAM</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/Power Supply Unit' >Power Supply Unit</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/Storage Device'>Storage Device</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/Monitor'>Monitor</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Contact</a>
+                <a className="font-bold">Contact</a>
               </li>
             </ul>
           </div>
           <Link href='/' className="btn btn-ghost normal-case text-xl text-white">PC Build</Link>
         </div>
-        <div className="navbar-center hidden lg:flex text-white">
+        <div className="navbar-center hidden lg:flex text-white z-50">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Dropdown</a>
+              <a>Product</a>
             </li>
             <li tabIndex={0} >
               <details>
                 <summary>Categories</summary>
                 <ul className="p-2 w-64 text-black">
-                  <li>
-                    <a>ppppp pppp</a>
+                <li>
+                  <Link href='/featured/Processor'>Processor</Link>
                   </li>
                   <li>
-                    <a>2</a>
+                  <Link href='/featured/Motherboard' >Motherboard</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/RAM'>RAM</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/Power Supply Unit' >Power Supply Unit</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/Storage Device'>Storage Device</Link>
+                  </li>
+                  <li>
+                  <Link href='/featured/Monitor'>Monitor</Link>
                   </li>
                 </ul>
               </details>
@@ -71,8 +95,8 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">PC Build</a>
-          <a className="btn">Login</a>
+          <a className="btn mx-3">PC Build</a>
+          <Link href='/login' className="btn">Login</Link>
         </div>
       </div>
     </div>
