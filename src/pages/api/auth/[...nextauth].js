@@ -11,7 +11,7 @@ export const authOptions = {
     }),
   ],
   pages:{
-    signIn:"https://pc-build-one.vercel.app/"
+    signIn:"https://pc-build-one.vercel.app"
   }
 };
 
